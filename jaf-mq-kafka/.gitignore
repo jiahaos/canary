@@ -1,0 +1,42 @@
+# Operating System Files
+
+*.DS_Store
+Thumbs.db
+*~
+.#*
+#*
+*#
+
+# Build Files #
+
+bin
+target
+build/
+.gradle
+
+# Eclipse
+.classpath
+.project
+.settings/
+
+# Intellij
+.idea/
+*.iml
+*.iws
+
+# Mac
+.DS_Store
+
+# Maven
+log/
+target/
+
+#lucene
+lucene-index/
+
+#properties for local
+*application-database.properties
+
+logs/*.log
+support-images/dist
+support-app-updater/dist
