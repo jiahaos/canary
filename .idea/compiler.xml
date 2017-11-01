@@ -6,11 +6,26 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="canary" />
+        <module name="jaf-consul" />
+        <module name="jaf-context" />
+        <module name="jaf-core" />
+        <module name="jaf-event" />
+        <module name="jaf-mq-kafka" />
+        <module name="jaf-rds-mongo" />
+        <module name="jaf-rds-mysql" />
+        <module name="jaf-rds-redis" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
-      <module name="canary" target="1.5" />
+      <module name="canary" target="1.8" />
+      <module name="jaf-consul" target="1.8" />
+      <module name="jaf-context" target="1.8" />
+      <module name="jaf-core" target="1.8" />
+      <module name="jaf-event" target="1.8" />
+      <module name="jaf-mq-kafka" target="1.8" />
+      <module name="jaf-rds-mongo" target="1.8" />
+      <module name="jaf-rds-mysql" target="1.8" />
+      <module name="jaf-rds-redis" target="1.8" />
     </bytecodeTargetLevel>
   </component>
 </project>
