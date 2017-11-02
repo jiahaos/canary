@@ -27,6 +27,7 @@
     <module>jaf-rds-mysql</module>
     <module>jaf-rds-redis</module>
     <module>jaf-rds-mongo</module>
+    <module>jaf-tools</module>
   </modules>
 
   <!-- properties 属性标签，提取公共常量属性标签，可以自定义，如想引用利用${jedis.version} 方式引用  -->

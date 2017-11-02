@@ -14,6 +14,7 @@
         <module name="jaf-rds-mongo" />
         <module name="jaf-rds-mysql" />
         <module name="jaf-rds-redis" />
+        <module name="jaf-tools" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
@@ -26,6 +27,7 @@
       <module name="jaf-rds-mongo" target="1.8" />
       <module name="jaf-rds-mysql" target="1.8" />
       <module name="jaf-rds-redis" target="1.8" />
+      <module name="jaf-tools" target="1.8" />
     </bytecodeTargetLevel>
   </component>
 </project>

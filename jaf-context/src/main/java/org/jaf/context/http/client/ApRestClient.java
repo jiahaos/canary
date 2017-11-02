@@ -6,9 +6,12 @@ import org.springframework.http.HttpEntity;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpMethod;
 import org.springframework.http.ResponseEntity;
+import org.springframework.http.client.SimpleClientHttpRequestFactory;
+import org.springframework.http.converter.StringHttpMessageConverter;
 import org.springframework.web.client.RestTemplate;
 
 import javax.annotation.PostConstruct;
+import java.nio.charset.Charset;
 import java.util.List;
 import java.util.Map;
 
@@ -27,6 +30,12 @@ public class ApRestClient {
     private void init() {
         //设置超时地址
         //https://stackoverflow.com/questions/13837012/spring-resttemplate-timeout
+        SimpleClientHttpRequestFactory rf =
+                (SimpleClientHttpRequestFactory) restTemplate.getRequestFactory();
+        rf.setReadTimeout(10 * 1000);
+        rf.setConnectTimeout(3 * 1000);
+        restTemplate.getMessageConverters()
+                .add(0, new StringHttpMessageConverter(Charset.forName("UTF-8")));
 //        HttpComponentsClientHttpRequestFactory httpRequestFactory = restTemplate.getRequestFactory();
 //        httpRequestFactory.setConnectionRequestTimeout(...);
 //        httpRequestFactory.setConnectTimeout(...);
@@ -111,6 +120,4 @@ public class ApRestClient {
             throw new RestClientException("url connection failed，url=" + url);
         }
     }
-
-
 }
