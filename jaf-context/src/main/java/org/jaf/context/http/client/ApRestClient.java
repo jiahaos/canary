@@ -44,6 +44,10 @@ public class ApRestClient {
 //        return new RestTemplate(httpRequestFactory);
     }
 
+    public RestTemplate getRestTemplate() {
+        return restTemplate;
+    }
+
     /**
      *  get json by http GET and turns it to object
      * @return

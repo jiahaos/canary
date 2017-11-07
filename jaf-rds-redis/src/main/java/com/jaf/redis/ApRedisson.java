@@ -25,7 +25,6 @@ import java.util.stream.Collectors;
  */
 @Slf4j
 @Service
-@ConditionalOnExpression("'${fortress.redisson.enabled}'=='true'")
 public class ApRedisson {
 
     @Value("${spring.profiles.active}")

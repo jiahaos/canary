@@ -16,6 +16,12 @@ public class RedisPoolUtils {
         }
     }
 
+    public RedisPoolUtils(String ip, int prot, String pass) {
+        if (pool == null) {
+            pool = new JedisPool(getConfig(), ip, prot, 100000, pass);
+        }
+    }
+
     private JedisPoolConfig getConfig() {
         // http://blog.didispace.com/springbootredis/
         JedisPoolConfig config = new JedisPoolConfig();

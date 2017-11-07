@@ -16,7 +16,7 @@ import javax.sql.DataSource;
 import java.util.Properties;
 
 @Configuration
-@ConditionalOnExpression("'${fortress.mybatis.enabled}'=='true'")
+//@ConditionalOnExpression("'${fortress.mybatis.enabled}'=='true'")
 public class MyBatisDataSourceConfig {
 
     @Autowired

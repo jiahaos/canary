@@ -24,6 +24,7 @@ public class RedisService {
 
     private String nodes;
     private String maxRedirects;
+    private String requirepass;
 
     private Set<HostAndPort> jedisClusterNodes;
     private JedisCluster jedisCluster;
@@ -31,8 +32,9 @@ public class RedisService {
 
     @PostConstruct
     public void init() {
-        this.nodes = environment.getProperty("redis.nodes");
-        this.maxRedirects = environment.getProperty("redis.max-redirects");
+        this.nodes = environment.getProperty("spring.redis.cluster.nodes");
+        this.maxRedirects = environment.getProperty("spring.redis.cluster.max-redirects");
+        this.requirepass = environment.getProperty("spring.redis.cluster.requirepass");
         if (nodes == null || "".equals(nodes)) {
             log.info("未找到redis的配置");
             return;
@@ -41,7 +43,7 @@ public class RedisService {
             this.jedisClusterNodes = decodeArguments(nodes);
             if(jedisClusterNodes.size() == 1) {
                 redisType = RedisEnum.SIMPLE;
-                pool = createJedisPool(jedisClusterNodes);
+                pool = createJedisPool(jedisClusterNodes, requirepass);
             }else {
                 jedisCluster = createJedisCluster(jedisClusterNodes, maxRedirects);
                 redisType = RedisEnum.CLUSTER;
@@ -61,9 +63,9 @@ public class RedisService {
         return rs;
     }
 
-    public JedisPool createJedisPool(Set<HostAndPort> jedisClusterNodes) {
+    public JedisPool createJedisPool(Set<HostAndPort> jedisClusterNodes, String requirepass) {
         HostAndPort jedisClusterNode = (HostAndPort) jedisClusterNodes.toArray()[0];
-        RedisPoolUtils poolUtils = new RedisPoolUtils(jedisClusterNode.getHost(), jedisClusterNode.getPort());
+        RedisPoolUtils poolUtils = new RedisPoolUtils(jedisClusterNode.getHost(), jedisClusterNode.getPort(), requirepass);
         return poolUtils.getRedisPool();
     }
 

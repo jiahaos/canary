@@ -2,7 +2,7 @@ spring:
   profiles:
     active: dev
   application:
-    name: jh-mybatis
+    name: jaf-rds-redis
 #server:
 #  port: 11033
 #  contextPath: /v1
@@ -13,13 +13,8 @@ fortress:
 ---
 spring:
   profiles: dev
-  datasource:
-    url: jdbc:mysql://rm-uf61501896t6034l1o.mysql.rds.aliyuncs.com:3306/renren_fast?allowMultiQueries=true&useUnicode=true&characterEncoding=UTF-8&useSSL=true
-    username: root
-    password: JIAhao123
-    driver-class-name: com.mysql.jdbc.Driver
-    max-active: 5
-  jpa:
-    hibernate:
-      dialect: org.hibernate.dialect.MySQL5Dialect
-    show-sql: true
+  redis:
+    cluster:
+      nodes: 47.94.221.81:6379
+      max-redirects: 10
+      requirepass: foobared
