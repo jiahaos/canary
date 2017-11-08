@@ -8,6 +8,7 @@ import org.springframework.http.HttpMethod;
 import org.springframework.http.ResponseEntity;
 import org.springframework.http.client.SimpleClientHttpRequestFactory;
 import org.springframework.http.converter.StringHttpMessageConverter;
+import org.springframework.stereotype.Component;
 import org.springframework.web.client.RestTemplate;
 
 import javax.annotation.PostConstruct;
@@ -22,6 +23,7 @@ import java.util.Map;
  * @date 2017/11/1 15:47
  */
 @Slf4j
+@Component
 public class ApRestClient {
 
     private RestTemplate restTemplate = new RestTemplate();

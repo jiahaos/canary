@@ -3,13 +3,6 @@ spring:
     active: dev
   application:
     name: jaf-rds-redis
-#server:
-#  port: 11033
-#  contextPath: /v1
-#  display-name: jh-mybatis
-fortress:
-  mybatis:
-    enabled: true
 ---
 spring:
   profiles: dev

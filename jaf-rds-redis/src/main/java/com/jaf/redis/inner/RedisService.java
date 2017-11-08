@@ -65,7 +65,11 @@ public class RedisService {
 
     public JedisPool createJedisPool(Set<HostAndPort> jedisClusterNodes, String requirepass) {
         HostAndPort jedisClusterNode = (HostAndPort) jedisClusterNodes.toArray()[0];
-        RedisPoolUtils poolUtils = new RedisPoolUtils(jedisClusterNode.getHost(), jedisClusterNode.getPort(), requirepass);
+        RedisPoolUtils poolUtils = null;
+        if(requirepass == null || requirepass.equals(""))
+            poolUtils = new RedisPoolUtils(jedisClusterNode.getHost(), jedisClusterNode.getPort());
+        else
+            poolUtils = new RedisPoolUtils(jedisClusterNode.getHost(), jedisClusterNode.getPort(), requirepass);
         return poolUtils.getRedisPool();
     }
 
