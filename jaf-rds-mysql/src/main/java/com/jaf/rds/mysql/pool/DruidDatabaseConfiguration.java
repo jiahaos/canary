@@ -9,9 +9,6 @@ import org.springframework.core.env.Environment;
 import java.beans.PropertyVetoException;
 import java.sql.SQLException;
 
-/**
- * Created by hsk on 2016/11/10.
- */
 @Configuration
 public class DruidDatabaseConfiguration {
 
