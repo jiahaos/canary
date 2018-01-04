@@ -1,0 +1,39 @@
+spring:
+  application:
+    name: jaf-config
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://github.com/jiahaos/canary
+          search-paths: jaf-config-repo
+
+#服务端口
+server:
+  port: 8781
+
+eureka:
+  instance:
+    hostname: localhost
+# 注册时显示ip
+    prefer-ip-address: true
+#metadata-map 元数据 instanceId 可以实现多实例部署在一台服务器
+    metadata-map:
+      user.name: ${security.user.name}
+      user.password: ${security.user.password}
+    #  instanceId: ${spring.application.name}:${random.value}
+###强制不注册到注册服务器 registerWithEureka, fetchRegistry
+  client:
+#服务端属性，客户端不能用，用了注册不上
+#    register-with-eureka: false
+#    fetch-registry: false
+#注册中心地址 service-url
+    service-url:
+      defaultZone: http://${security.user.name}:${security.user.password}@${eureka.instance.hostname}:8761/eureka/
+
+
+security:
+  user:
+    name: user
+    password: 123
+#${REGISTRY_SERVER_PASSWORD:password}

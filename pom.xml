@@ -29,6 +29,8 @@
     <module>jaf-rds-mongo</module>
     <module>jaf-tools</module>
     <module>jaf-eureka-server</module>
+    <module>jaf-config-repo</module>
+      <module>jaf-config</module>
   </modules>
 
   <!-- properties 属性标签，提取公共常量属性标签，可以自定义，如想引用利用${jedis.version} 方式引用  -->
