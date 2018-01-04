@@ -1,0 +1,20 @@
+spring:
+  profiles:
+    active: dev
+
+fortress:
+  mybatis:
+    enabled: true
+---
+spring:
+  profiles: dev
+  datasource:
+    url: jdbc:mysql://xxxxxxx:3306/xxxxx?allowMultiQueries=true&useUnicode=true&characterEncoding=UTF-8&useSSL=false
+    username: root
+    password: xxxxxxx
+    driver-class-name: com.mysql.jdbc.Driver
+    max-active: 5
+  jpa:
+    hibernate:
+      dialect: org.hibernate.dialect.MySQL5Dialect
+    show-sql: true
