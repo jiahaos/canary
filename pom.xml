@@ -5,7 +5,7 @@
   <parent>
     <groupId>org.springframework.boot</groupId>
     <artifactId>spring-boot-starter-parent</artifactId>
-    <version>1.5.8.RELEASE</version>
+    <version>1.5.9.RELEASE</version>
   </parent>
 
 
@@ -28,6 +28,7 @@
     <module>jaf-rds-redis</module>
     <module>jaf-rds-mongo</module>
     <module>jaf-tools</module>
+    <module>jaf-eureka-server</module>
   </modules>
 
   <!-- properties 属性标签，提取公共常量属性标签，可以自定义，如想引用利用${jedis.version} 方式引用  -->
@@ -48,6 +49,13 @@
   <!-- dependencyManagement  在我们项目顶层的POM文件中，我们会看到dependencyManagement元素。通过它元素来管理jar包的版本，让子项目中引用一个依赖而不用显示的列出版本号。Maven会沿着父子层次向上走，直到找到一个拥有dependencyManagement元素的项目，然后它就会使用在这个dependencyManagement元素中指定的版本号。   -->
   <dependencyManagement>
     <dependencies>
+      <dependency>
+        <groupId>org.springframework.cloud</groupId>
+        <artifactId>spring-cloud-dependencies</artifactId>
+        <version>Edgware.RELEASE</version>
+        <type>pom</type>
+        <scope>import</scope>
+      </dependency>
       <dependency>
         <groupId>redis.clients</groupId>
         <artifactId>jedis</artifactId>
@@ -80,7 +88,6 @@
       </dependency>
     </dependencies>
   </dependencyManagement>
-
 
 
   <build>
@@ -122,12 +129,13 @@
   <!--SCM(Source Control Management)标签允许你配置你的代码库，供Maven web站点和其它插件使用。-->
   <scm>
     <!--指向项目的可浏览SCM库（例如ViewVC或者Fisheye）的URL。-->
-    <url>https://code.aliyun.com/jh-canary/canary.git</url>
+    <url>https://github.com/jiahaos/canary.git</url>
     <!--SCM的URL,该URL描述了版本库和如何连接到版本库。欲知详情，请看SCMs提供的URL格式和列表。该连接只读。-->
-    <connection>scm:git:https://code.aliyun.com/jh-canary/canary.git</connection>
+    <connection>scm:git:https://github.com/jiahaos/canary.git</connection>
     <!--当前代码的标签，在开发阶段默认为HEAD-->
     <tag>HEAD</tag>
   </scm>
+
 
   <profiles>
     <profile>

@@ -6,39 +6,11 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="biz-acl" />
-        <module name="core-acl" />
-        <module name="jaf-consul" />
-        <module name="jaf-context" />
-        <module name="jaf-core" />
-        <module name="jaf-event" />
-        <module name="jaf-mq-kafka" />
-        <module name="jaf-rds-mongo" />
-        <module name="jaf-rds-mysql" />
-        <module name="jaf-rds-redis" />
-        <module name="jaf-tools" />
-        <module name="security-oauth2-client" />
         <module name="security-oauth2-server" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
-      <module name="biz-acl" target="1.8" />
-      <module name="canary" target="1.8" />
       <module name="canary-base-service" target="1.8" />
-      <module name="canary-biz-common" target="1.8" />
-      <module name="canary-user" target="1.8" />
-      <module name="core-acl" target="1.8" />
-      <module name="jaf-consul" target="1.8" />
-      <module name="jaf-context" target="1.8" />
-      <module name="jaf-core" target="1.8" />
-      <module name="jaf-event" target="1.8" />
-      <module name="jaf-mq-kafka" target="1.8" />
-      <module name="jaf-rds-mongo" target="1.8" />
-      <module name="jaf-rds-mysql" target="1.8" />
-      <module name="jaf-rds-redis" target="1.8" />
-      <module name="jaf-shiro-oauth" target="1.6" />
-      <module name="jaf-tools" target="1.8" />
-      <module name="security-oauth2-client" target="1.8" />
       <module name="security-oauth2-server" target="1.8" />
     </bytecodeTargetLevel>
   </component>

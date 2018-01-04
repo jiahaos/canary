@@ -3,16 +3,8 @@
   <component name="MavenProjectsManager">
     <option name="originalFiles">
       <list>
-        <option value="$PROJECT_DIR$/pom.xml" />
-        <option value="D:/github_work/canary-base-service/pom.xml" />
-        <option value="$PROJECT_DIR$/../canary-user/pom.xml" />
-        <option value="D:/github_work/canary-biz-common/pom.xml" />
+        <option value="$PROJECT_DIR$/../canary-base-service/pom.xml" />
       </list>
-    </option>
-    <option name="ignoredFiles">
-      <set>
-        <option value="D:/github_work/canary-base-service/jaf-shiro-oauth/pom.xml" />
-      </set>
     </option>
   </component>
   <component name="ProjectRootManager" version="2" languageLevel="JDK_1_8" project-jdk-name="1.8" project-jdk-type="JavaSDK">

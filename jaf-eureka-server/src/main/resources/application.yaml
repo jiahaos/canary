@@ -1,0 +1,25 @@
+#服务端口
+server:
+  port: 8761
+
+eureka:
+  instance:
+    hostname: localhost
+# 注册时显示ip
+    prefer-ip-address: true
+#驱逐下线的服务，间隔,2秒，默认是60，建议开发和测试环境配置
+  server:
+    evictionIntervalTimerInMs: 1000
+##强制不注册到注册服务器 registerWithEureka, fetchRegistry
+  client:
+    register-with-eureka: false
+    fetch-registry: false
+#注册中心地址 service-url
+    service-url:
+      defaultZone: http://${security.user.name}:${security.user.password}@${eureka.instance.hostname}:${server.port}/eureka/
+
+security:
+  user:
+    name: user
+    password: 123
+#${REGISTRY_SERVER_PASSWORD:password}
