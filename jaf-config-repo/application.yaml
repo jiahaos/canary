@@ -1,11 +1,3 @@
-spring:
-  profiles:
-    active: dev
-
 fortress:
   mybatis:
     enabled: true
----
-spring:
-  profiles: dev
-  test: hello world
