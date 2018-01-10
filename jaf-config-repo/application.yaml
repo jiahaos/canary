@@ -1,3 +1,15 @@
 fortress:
   mybatis:
     enabled: true
+
+spring:
+  datasource:
+    url: jdbc:mysql://39.106.73.29:3306/canary?allowMultiQueries=true&useUnicode=true&characterEncoding=UTF-8&useSSL=false
+    username: user
+    password: 123456
+    driver-class-name: com.mysql.jdbc.Driver
+    max-active: 5
+  jpa:
+    hibernate:
+      dialect: org.hibernate.dialect.MySQL5Dialect
+    show-sql: true
