@@ -1,12 +1,5 @@
 package com.jaf.tools.bytes;
 
-/**
- * 项目名称：TSP平台
- * 公司信息：北京四维图新科技股份有限公司
- *
- * @author 王蒙(383418982@qq.com)
- * @datetime 2018-09-12 16:38
- */
 public class CanFormat {
     int sccan = 0;
     int id =0x001;
