@@ -29,7 +29,7 @@
     <module>jaf-rds-mongo</module>
     <module>jaf-tools</module>
     <module>jaf-eureka-server</module>
-    <module>jaf-config-repo</module>
+    <!--<module>jaf-config-repo</module>-->
       <module>jaf-config</module>
   </modules>
 

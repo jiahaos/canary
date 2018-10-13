@@ -2,7 +2,19 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/canary.iml" filepath="$PROJECT_DIR$/.idea/canary.iml" />
       <module fileurl="file://$PROJECT_DIR$/../canary-base-service/canary-base-service.iml" filepath="$PROJECT_DIR$/../canary-base-service/canary-base-service.iml" />
+      <module fileurl="file://$PROJECT_DIR$/jaf-config/jaf-config.iml" filepath="$PROJECT_DIR$/jaf-config/jaf-config.iml" />
+      <module fileurl="file://$PROJECT_DIR$/jaf-consul/jaf-consul.iml" filepath="$PROJECT_DIR$/jaf-consul/jaf-consul.iml" />
+      <module fileurl="file://$PROJECT_DIR$/jaf-context/jaf-context.iml" filepath="$PROJECT_DIR$/jaf-context/jaf-context.iml" />
+      <module fileurl="file://$PROJECT_DIR$/jaf-core/jaf-core.iml" filepath="$PROJECT_DIR$/jaf-core/jaf-core.iml" />
+      <module fileurl="file://$PROJECT_DIR$/jaf-eureka-server/jaf-eureka-server.iml" filepath="$PROJECT_DIR$/jaf-eureka-server/jaf-eureka-server.iml" />
+      <module fileurl="file://$PROJECT_DIR$/jaf-event/jaf-event.iml" filepath="$PROJECT_DIR$/jaf-event/jaf-event.iml" />
+      <module fileurl="file://$PROJECT_DIR$/jaf-mq-kafka/jaf-mq-kafka.iml" filepath="$PROJECT_DIR$/jaf-mq-kafka/jaf-mq-kafka.iml" />
+      <module fileurl="file://$PROJECT_DIR$/jaf-rds-mongo/jaf-rds-mongo.iml" filepath="$PROJECT_DIR$/jaf-rds-mongo/jaf-rds-mongo.iml" />
+      <module fileurl="file://$PROJECT_DIR$/jaf-rds-mysql/jaf-rds-mysql.iml" filepath="$PROJECT_DIR$/jaf-rds-mysql/jaf-rds-mysql.iml" />
+      <module fileurl="file://$PROJECT_DIR$/jaf-rds-redis/jaf-rds-redis.iml" filepath="$PROJECT_DIR$/jaf-rds-redis/jaf-rds-redis.iml" />
+      <module fileurl="file://$PROJECT_DIR$/jaf-tools/jaf-tools.iml" filepath="$PROJECT_DIR$/jaf-tools/jaf-tools.iml" />
       <module fileurl="file://$PROJECT_DIR$/../canary-base-service/security-oauth2-server/security-oauth2-server.iml" filepath="$PROJECT_DIR$/../canary-base-service/security-oauth2-server/security-oauth2-server.iml" />
     </modules>
   </component>
