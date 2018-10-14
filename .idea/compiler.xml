@@ -16,6 +16,8 @@
         <module name="jaf-rds-mongo" />
         <module name="jaf-rds-mysql" />
         <module name="jaf-rds-redis" />
+        <module name="jaf-tcp-client" />
+        <module name="jaf-tcp-server" />
         <module name="jaf-tools" />
         <module name="security-oauth2-server" />
       </profile>
@@ -33,6 +35,8 @@
       <module name="jaf-rds-mongo" target="1.8" />
       <module name="jaf-rds-mysql" target="1.8" />
       <module name="jaf-rds-redis" target="1.8" />
+      <module name="jaf-tcp-client" target="1.8" />
+      <module name="jaf-tcp-server" target="1.8" />
       <module name="jaf-tools" target="1.8" />
       <module name="security-oauth2-server" target="1.8" />
     </bytecodeTargetLevel>
