@@ -55,7 +55,7 @@ xsi:schemaLocation="http://maven.apache.org/POM/4.0.0http://maven.apache.org/mav
     <!--发生错误时是否通知-->  
     <sendOnError/>  
     <!--构建失败时是否通知-->  
-    <sendOnFailure/>  
+    <sendOnFailure/>
     <!--构建成功时是否通知-->  
     <sendOnSuccess/>  
     <!--发生警告时是否通知-->  
