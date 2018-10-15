@@ -1,11 +1,11 @@
 package com.jaf.tcp.server;
 
+import io.netty.buffer.ByteBuf;
 import io.netty.channel.ChannelHandlerAdapter;
 import io.netty.channel.ChannelHandlerContext;
-import io.netty.buffer.ByteBuf;
 import io.netty.util.ReferenceCountUtil;
 
-public class DiscardServerHandler extends ChannelHandlerAdapter {
+public class TimeServerHandler extends ChannelHandlerAdapter {
 
 //    @Override
     public void channelRead(ChannelHandlerContext ctx, Object msg) { // (2)
