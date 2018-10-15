@@ -28,6 +28,7 @@ public class DiscardServerHandler extends ChannelHandlerAdapter {
         // Close the connection when an exception is raised.
         cause.printStackTrace();
         ctx.close();
+
     }
 
 
