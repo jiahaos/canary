@@ -41,9 +41,10 @@ public class ByteUtils {
             bytes1[i] = one;
         }
         System.out.println(Base64.encodeBase64String(bytes1));
+        String condition = "TA 181213154424433 89860918700302292633 2001 5.1 1062 7BE0 \n";
 
-
-//
+        System.out.printf(condition.getBytes().length + "");
+        //
 //
     }
 

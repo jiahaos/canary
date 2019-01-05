@@ -11,5 +11,23 @@
 
     <artifactId>jaf-tcp-client</artifactId>
 
+    <dependencies>
+        <!-- https://mvnrepository.com/artifact/io.netty/netty-all -->
+        <dependency>
+            <groupId>io.netty</groupId>
+            <artifactId>netty-all</artifactId>
+            <version>4.1.12.Final</version>
+        </dependency>
 
+        <!--<dependency>-->
+        <!--<groupId>io.netty</groupId>-->
+        <!--<artifactId>netty-common</artifactId>-->
+        <!--<version>${io.netty.version}</version>-->
+        <!--</dependency>-->
+        <!--<dependency>-->
+        <!--<groupId>io.netty</groupId>-->
+        <!--<artifactId>netty-buffer</artifactId>-->
+        <!--<version>${io.netty.version}</version>-->
+        <!--</dependency>-->
+    </dependencies>
 </project>

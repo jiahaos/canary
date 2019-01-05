@@ -30,7 +30,7 @@ public class DiscardServer {
                 .childHandler(new ChannelInitializer<SocketChannel>() {
                     @Override
                     protected void initChannel(SocketChannel socketChannel) throws Exception {
-                        socketChannel.pipeline().addLast(new DiscardServerHandler());
+                        socketChannel.pipeline().addLast(new EchoServerHandler());
                     }
                 })
                 .option(ChannelOption.SO_BACKLOG, 120)
