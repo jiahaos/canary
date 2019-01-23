@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Configuration status="WARN">
+    <Appenders>
+        <Console name="ConsoleAppender" target="SYSTEM_OUT">
+            <PatternLayout pattern="%highlight{%d{yyyy-MM-dd HH:mm:ss.SSS} %-5level [%t] %c - %msg%n}{FATAL=magenta, ERROR=red, WARN=blue, INFO=blue, DEBUG=green, TRACE=green}"/>
+        </Console>
+        <File name="StaticFileAppender" fileName="${sys:user.dir}/logs/static.log">
+            <PatternLayout pattern="%d{yyyy-MM-dd HH:mm:ss.SSS} %-5level [%t] %c - %msg%n"/>
+        </File>
+        <RollingFile name="RollingFileAppender" fileName="${sys:user.dir}/logs/roll.log"
+                     filePattern="${sys:user.dir}/logs/roll-%i.log">
+            <PatternLayout pattern="%d{yyyy-MM-dd HH:mm:ss.SSS} %-5level [%t] %c{1.} - %msg%n"/>
+            <Policies>
+                <SizeBasedTriggeringPolicy size="900 MB"/>
+            </Policies>
+            <DefaultRolloverStrategy max="20"/>
+        </RollingFile>
+    </Appenders>
+    <Loggers>
+        <Root level="INFO">
+            <AppenderRef ref="RollingFileAppender"/>
+        </Root>
+        
+        <logger name="io.netty" level="DEBUG"/>
+
+        <logger name="com.jaf" level="INFO"
+                additivity="false">
+            <AppenderRef ref="ConsoleAppender"/>
+            <AppenderRef ref="StaticFileAppender"/>
+
+        </logger>
+    </Loggers>
+</Configuration>
